@@ -1,5 +1,5 @@
 
-const SEARCH_CONFIG = { mode: 'local', localIndex: '/assets/js/search-index.json', externalHint: 'Für sehr große Kataloge ab ca. 20k–50k Datensätzen sollte ein externer Suchindex wie Algolia oder Meilisearch verwendet werden.' };
+const SEARCH_CONFIG = { mode: 'external', localIndex: '/assets/js/search-index.json', externalHint: 'Für sehr große Kataloge ab ca. 20k–50k Datensätzen sollte ein externer Suchindex wie Algolia oder Meilisearch verwendet werden.' };
 let __catalogCache;
 async function loadCatalog(){ if(__catalogCache) return __catalogCache; if(SEARCH_CONFIG.mode !== 'local') return []; const res = await fetch(SEARCH_CONFIG.localIndex); __catalogCache = await res.json(); return __catalogCache; }
 function normalize(s){ return (s||'').toLowerCase(); }

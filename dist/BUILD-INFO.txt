@@ -1,0 +1,14 @@
+# ERSAAL Static Catalog
+
+Production-ready static B2B quote-request catalog generated from CSV files.
+
+## Build
+python build.py
+
+## Search mode
+external search recommended
+
+## Dataset summary
+Products: 29480
+Brands: 1
+Categories: 1
